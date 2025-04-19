@@ -17,6 +17,8 @@ const deploymentName = process.env.QNA_DEPLOYMENT_NAME?.trim();
 const apiKey = process.env.QNA_KEY?.trim();
 const predictionUrl = `${endpoint}language/:query-knowledgebases?projectName=${projectName}&api-version=2021-10-01&deploymentName=${deploymentName}`;
 
+
+// Check for required environment variables
 // Bot adapter
 const adapter = new BotFrameworkAdapter({
   appId: process.env.MICROSOFT_APP_ID?.trim(),
